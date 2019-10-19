@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .fruit {
+            width: 100px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+    <input id="fruitName" />
+
+    <button id="generator">Get Fruits</button>
+
+
+    <div id="fruitContainer">
+
+    </div>
+    <script>
+
+
+        let shopFruits = ['apple', 'mango'];
+        let fName = fruitName.value;
+
+        generator.onclick = function () {
+
+            fName = fruitName.value;
+
+            if (shopFruits.indexOf(fName) == -1) {
+                alert("Fruit mangwana wa");
+            } else {
+                if (document.getElementById('fruitCounter') != null) {
+                    return;
+                }
+
+                let ele = document.createElement('input');
+                ele.id = "fruitCounter";
+
+                ele.oninput = function () {
+
+                    fruitContainer.innerHTML = '';
+
+                    for (var i = 0; i < ele.value; i++) {
+
+                        let img = document.createElement('img');
+                        img.src = fruitName.value + '.jpg';
+                        img.setAttribute('class', 'fruit');
+                        img.ondblclick = () => {
+                            img.src = 'cutted' + fName + ".jpg"
+                        }
+
+
+                        fruitContainer.appendChild(img);
+
+                    }
+
+                }
+
+                document.body.appendChild(ele);
+
+                fruitCounter.placeholder = "Kina fruit?";
+
+            }
+
+            fruitName.value
+
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>24 June, 2019</title>
+</head>
+
+<body>
+
+    <script>
+        // let show = prompt("enter the fruit name");
+        // let data = ['apple','apricot',['banana',['pineapple','dates','watermelon'],'dates'], 'watermelon'];
+
+        // let slice = data[2][1].indexOf("watermelon");
+
+        // data[2][1][slice] = "orange";
+
+        // console.log(data);
+
+
+        // let str = "I like pizza. pizza is very popular in FSD,pizza is very popular in FSD, do you like pizza too?";
+        // let value = prompt("Enter the value to calculate")
+        //  let count = 0;
+        // for (let index = 0; index < str.length; index++) {
+        //     if (str.charAt(index) == 'p' && str.charAt(index + 4) == 'a') {
+        //         count = count + 1;
+        //     }
+
+        // }
+        // console.log(count);
+
+        // while (str.indexOf(value) != -1) {
+
+        //     count = count + 1;
+
+        //     let index = str.indexOf(value);
+        //     str = str.slice(index + value.length -1)
+        // }
+        // do {
+        //     count = count + 1;
+        //     let index = str.indexOf('pizza')
+        //     str = str.slice(index + 4)
+        // } while (str.indexOf('pizza') != -1);
+
+        // console.log(count)
+
+
+
+        // console.log(word);
+
+
+        // var fruits = ["apple", "mango","banana","mango","orange","mango","banana", "mango", "banana","mango", "banana","mango","banana","mango","banana","mango","guava","banana"];
+        //     let get = prompt("Enter the fruit name");
+        //     let value = get.toLowerCase();
+        //     let count  = 0;
+
+        // while (fruits.indexOf("banana") != -1) {
+        //     count = count + 1
+
+        //     let index = fruits.indexOf("banana");
+        //     console.log(index);
+
+        //     fruits = fruits.slice("banana" + 1)
+        // }
+
+        // console.log(count);
+
+
+        function valueToGet(sentence, find) {
+            let str = sentence;
+            let value = find;
+            let count = 0;
+            while (str.indexOf(value) != -1) {
+
+                count = count + 1;
+
+                let index = str.indexOf(value);
+                str = str.slice(index + value.length - 1)
+            }
+            console.log(count)
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

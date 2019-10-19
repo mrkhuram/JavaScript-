@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+  <script>
+
+    // let calculator = {
+    //   add: function (a, b) {
+
+    //     return a + b;
+
+    //   },
+    //   subtraction: function () {
+
+
+    //   }
+    // }
+
+    // let num1 = +prompt("Enter number 1");
+    // let num2 = +prompt("Enter number 2");
+
+    // let op = prompt("Enter operator");
+
+    // let res = 0;
+
+    // switch (op) {
+
+    //   case "+":
+    //     res = calculator.add(num1, num2);
+    //     break;
+
+    //   case "-":
+    //     res = calculator.subtraction();
+    //     break;
+
+    // }
+
+
+
+
+  </script>
+
+</head>
+
+<body>
+
+
+  <input type="text" id="numsTable" />
+  <button id="genTable">Generate Table</button>
+
+  <div id="tableBox">
+
+  </div>
+
+
+  <script>
+
+    function generateTable() {
+
+      let num = +numsTable.value;
+
+      tableBox.innerHTML = 'GENERATED TABLE! <br />';
+
+      for (var i = 1; i <= 10; i++) {
+
+        tableBox.innerHTML += num + " * " + i + " = " + (num * i) + '<br />';
+
+      }
+
+    }
+
+    genTable.onclick = generateTable;
+
+
+
+  </script>
+
+</body>
+
+</html>

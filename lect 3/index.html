@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // let str = "you are my hero(yeh sub jhoot hai)"
+        // let vowels = "aeiou"
+        // let strNew = []
+
+
+        // let getString = function(){
+        //     for(let item in str){
+        //         let letter = str.charAt(item);
+        //         if(vowels.indexOf(letter) != -1){
+        //             strNew.push(letter);
+
+        //         }
+
+
+        //     }
+        // }
+
+
+
+        // let res = sumNum(3, 4, 5);
+
+        // alert(res);
+
+        // function sumNum(...nums) {
+
+        //     console.log(nums);
+
+        //     let total = 0;
+
+        //     for (let item of nums) {
+
+        //         total += item
+        //     }
+
+        //     return total;
+        // }
+        // let myData = prompt("Enter the numbers to add");
+        // let res = sumNum(myData.split(','));
+        // console.log(res);
+
+        // let res = sumNum(3, 4, 5);
+
+        // function sumNum(...nums) {
+
+        //     console.log(nums);
+
+        //     let total = 0;
+
+        //     for (let item of nums) {
+
+        //         total += +item
+        //     }
+
+        //     return total;
+        // }
+
+
+
+        let data = (2,3,4,5,6);
+        let res2 = function(...data) {
+            console.log(data);
+            
+            let total = 0;
+
+            for (let item of data) {
+                total += +item;
+            }
+            return total;
+        }
+        console.log("This is the result" + res2(...data.split(',')));
+
+
+    
+
+
+
+    </script>
+
+</body>
+
+</html>

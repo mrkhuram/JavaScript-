@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .fruit {
+            height: 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" placeholder="Enter fruit Name" id="name2">
+        <br>
+        <input type="text" placeholder="Enter fruit quantity" id="quan">
+        <br>
+        <button id="myBtn" onclick="generate()">Generate fruits</button>
+        <p id="generate"></p>
+
+    </div>
+    <div id="fruitcontainer">
+
+    </div>
+    <script>
+
+
+        function generate() {
+
+
+            let quantity = quan.value
+            let fruitName = name2.value
+            let fruit = fruitcontainer
+            fruit.innerHTML = ''
+
+            for (let i = 1; i <= quantity; i++) {
+                let img = document.createElement('img')
+                img.setAttribute('class', 'fruit')
+                img.ondblclick = function() {
+                    img.remove()
+                }
+
+                let imgSrc = ""
+                switch (fruitName) {
+                    case fruitName:
+                        imgSrc = fruitName + '.jpg'
+                        break;
+                    default:
+                        break;
+                }
+
+                img.src = imgSrc
+
+                fruit.appendChild(img)
+            }
+
+
+
+        }
+        function toDelete() {
+            img.remove()
+        }
+
+    </script>
+</body>
+
+</html>

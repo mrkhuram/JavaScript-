@@ -1,0 +1,55 @@
+<!-- Get data of 3 arrays put them in a single one
+
+Take 6 numbers from user using propmt and put the even numbers in the array ( rest or spread ) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // let arr1 = [1, 2, 3, 4, 5, 6];
+        // let arr2 = [7, 8, 9, 10, 11, 12];
+        // let arr3 = [13, 14, 15, 16, 17, 18];
+
+        // let arr4 = [...arr1, ...arr2, ...arr3]
+        // console.log(arr4);
+
+        let num = prompt("Enter the number")
+        let newNum = num.split(',')
+        console.log(newNum);
+        
+        let data = total(...newNum)
+
+            function total(...data) {
+                    let num = 0;
+                    let arr =[]
+                    let arr2 =[]
+                    // console.log(arr2);
+                    
+                for( let item of data){
+                
+                    if(item%2 == 1){
+                        arr.push(item)
+                        
+                    }else{
+                        arr2.push(item)
+                    }
+                }
+                return arr;
+                
+            }
+
+        console.log(data);
+        
+    </script>
+</body>
+
+</html>

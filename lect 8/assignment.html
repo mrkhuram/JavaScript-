@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .student-item {
+            border: 1px solid rgb(233, 158, 158);
+            margin: 10px;
+            width: fit-content;
+            padding: 20px;
+        }
+
+
+        #studentSection {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        Name <input id="sName" />
+    </div>
+    <div>
+        City <input id="sCity" />
+    </div>
+    <div>
+        email <input id="sEmail" />
+    </div>
+    <div>
+        Province 
+        <select id="sProvince">
+            <option value="punjab">Punjab</option>
+            <option value="sindh">SIndh</option>
+            <option value="bCH">Balochistan</option>
+            <option value="punjab">KPK</option>
+            <option value="GBT">GIlgit/Baltistan</option>
+        </select>
+    </div>
+
+    <button onclick="addStudent()">
+        Add Student
+    </button>
+
+
+    <div id="studentSection"  >
+
+    </div>
+
+</body>
+
+<script>
+
+    let rollNum = 100;
+
+    function addStudent() {
+
+
+        let name = sName.value;
+        let city = sCity.value;
+        let email = sEmail.value;
+        let province = sProvince.value;
+        if(!name || !city || !email){
+            return
+        }
+
+        studentSection.innerHTML += '<div class="student-item" id="get" onclick="toDelete()">\
+        <div> <b>_ROLL_ </b>' + rollNum + '</div>\
+        <div> <b>Name </b>' + name + '</div>\
+        <div> <b>City </b>' + city + '</div>\
+        <div> <b>Email </b>' + email + '</div>\
+        <div> <b>PRovince </b>' + province + '</div>\
+        </div>'
+
+        rollNum++;
+
+    }
+    function toDelete(){
+        
+        document.getElementById('get').remove()
+        console.log("removed");
+        
+    }
+
+</script>
+
+</html>

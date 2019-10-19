@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <p>Assignment of finding vovles word in the sentence.</p>
+
+
+
+    <script>
+        let str1 = "Assignment of finding vovles word in the sentence."
+        /* ----------------------------------------------------------- */
+        /* ----------------- Assignment Done ------------------------- */
+        /* ----------------------------------------------------------- */
+
+        let str = str1.toLowerCase();
+        // console.log(str);
+
+        let arr = []
+        for (let i = 0; i < str.length; i++) {
+            if (str.charAt(i) == "a" || str.charAt(i) == "e" || str.charAt(i) == "i" || str.charAt(i) == "o" || str.charAt(i) == "u") {
+                arr.push(str.charAt(i));
+            }
+
+        }
+
+        /* ----------------------------------------------------------- */
+        /* ----------------- Assignment Done with function ----------- */
+        /* ----------------------------------------------------------- */
+
+
+        // let callToVovles = vovles(str1)
+        // function vovles(string) {
+        //     let str = str1.toLowerCase();
+        //     console.log(str);
+
+        //     let arr = []
+        //     for (let i = 0; i < str.length; i++) {
+        //         if (str.charAt(i) == "a" || str.charAt(i) == "e" || str.charAt(i) == "i" || str.charAt(i) == "o" || str.charAt(i) == "u") {
+        //             arr.push(str.charAt(i));
+        //         }
+
+        //     }
+        //     // console.log(arr);
+        //     return arr;
+
+        // }
+        // console.log(callToVovles);
+        /* ----------------------------------------------------------- */
+        /* ----------------- Assignment Done with User input ----------- */
+        /* ----------------------------------------------------------- */
+
+        // let string = prompt("Enter Sentence to separet the vovles...!!!")
+        // let str1 = string.toLowerCase();
+        // let callToVovles = vovles(str1)
+        // function vovles(string) {
+        //     let str = str1.toLowerCase();
+        //     console.log(str);
+
+        //     let arr = []
+        //     for (let i = 0; i < str.length; i++) {
+        //         if (str.charAt(i) == "a" || str.charAt(i) == "e" || str.charAt(i) == "i" || str.charAt(i) == "o" || str.charAt(i) == "u") {
+        //             arr.push(str.charAt(i));
+        //         }
+
+        //     }
+        //     // console.log(arr);
+        //     return arr;
+
+        // }
+        // console.log(callToVovles);
+
+            let string2 = "my name in khuram and in love myself."
+            let vowels = "aeiou"
+
+            let collection = [];
+
+            for(let item in string2){
+                let letter = string2.charAt(item)
+                if(vowels.indexOf(letter) != -1){
+                    collection.push(letter)
+                }
+            }
+            console.log(collection);
+            
+
+
+    </script>
+
+
+
+
+</body>
+
+
+</html>

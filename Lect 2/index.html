@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>25 June, 2019</title>
+</head>
+
+<body>
+
+
+    <script>
+        // var num = +prompt("Enter the number to get the factorial.")
+        // var factorial = 1;
+        // let str = "";
+
+        // for (let i = 1; i < (num + 1) ; i++) {
+        //     factorial = factorial * i;
+
+        //     str += ((num - 1) + 1) + " * ";
+
+        // }
+        //     std = str.slice(0, str.lastIndexOf(' * '));
+
+
+        // console.log(factorial);
+        // console.log(std);
+
+
+
+        // var num = 5;
+
+        // var factorial = getFactorial(num);
+
+        // function getFactorial(myNum){
+        //     if (myNum == 1) {
+        //         return  1;
+
+        //     }
+        //     else{
+        //         return getFactorial(myNum - 1) * myNum;
+        //     }
+        // }
+        // console.log(factorial);
+
+        var str = prompt("Enter a number to get reverse values")
+        console.log(str);
+
+        // for (let i = 0; i <= str.length; i++) {
+
+        //     if( i != str.length){
+        //     let element = str[str.length-i];
+        //     console.log(element);
+        //     }else{
+        //         const two = str[0];
+        //         console.log(two);
+
+        //     }
+
+
+        // }
+
+        //     for (let i = (str.length-1); i >= 0; i--) {
+        //         reversedStr += str[i]
+
+        //     }
+        // console.log(reversedStr);
+        let newStr = getReversed(str);
+
+        function getReversed(str) {
+            var reversedStr = "";
+
+            for (let i = (str.length - 1); i >= 0; i--) {
+                reversedStr += str[i]
+
+            }
+            console.log(reversedStr);
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

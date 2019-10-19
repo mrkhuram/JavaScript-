@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+        #noteBox {
+            border: 1px solid blue;
+            width: 500px;
+            padding: 50px;
+        }
+
+
+        .notePoint {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <button onclick="addNote()">Add Note</button>
+    <button onclick="clear()">Clear</button>
+
+    <div id="noteBox">
+
+        <div>
+            <strong>Note Title</strong>
+            <input type="text" id="noteTItle">
+        </div>
+
+
+        <div id="notePoints">
+
+            <button onclick="addNotePoint()">Add Note</button>
+
+
+        </div>
+
+        <div>
+            <button onclick="saveNote()">Save Note</button>
+
+        </div>
+
+    </div>
+    <div>
+        <button onclick="loadFromDB()">Preview</button>
+        <div id="preview">
+
+        </div>
+    </div>
+
+    <script>
+
+        class Note {
+
+            title = ""
+            subNotes = []
+
+        }
+
+        let notes = [];
+        let counter = 0
+
+        function next(){
+            counter++;
+            let note = notes[counter]
+            console.log(note);
+            
+            preview.innerHTML += `<th>${note.title}</th>`
+
+        }
+        function back() {
+            counter--
+            let note = notes[counter]
+            console.log(note);
+            
+        }
+
+        function renderData(notes) {
+            preview.innerHTML += `<th>${notes.title}</th>
+            <li>${notes.subPoints}</li>
+            <button onclick=next()>Next</button>
+            <button onclick=back()>Prev</button>
+            `
+        }
+
+        function loadFromDB() {
+
+            preview.innerHTML = ''
+            let notesData = JSON.parse(localStorage.getItem('myNotes'));
+            if (notesData != null) {
+                notes = notesData;
+            }
+            renderData(notesData)
+
+
+
+            
+
+
+            // notesData.forEach((item) => {
+
+            //     let itemTitle = item.title
+            //     preview.innerHTML += `<th>${itemTitle}</th>`
+                
+
+            //     item.subNotes.forEach((itemz) => {
+                
+            //         let subPoints = itemz
+                
+            //         preview.innerHTML += `<li>${subPoints}</li>
+            //         <button onclick=next()>Next</button>`
+
+
+            //         console.log(itemz);
+
+            //     })
+            // })
+
+
+
+
+        }
+
+
+        // loadFromDB();
+
+        function saveToDB() {
+
+            localStorage.setItem('myNotes', JSON.stringify(notes));
+
+        }
+
+        function saveNote() {
+
+            let newNote = new Note();
+            newNote.title = noteTItle.value;
+
+            let points = document.body.querySelectorAll('.notePoint');
+
+            points.forEach((point) => {
+
+                newNote.subNotes.push(point.value);
+
+                notes.push(newNote);
+            });
+
+
+            saveToDB();
+
+            alert('saving is chaling');
+        }
+
+        function addNotePoint() {
+
+            let ele = document.createElement('input');
+            ele.className = "notePoint";
+            notePoints.appendChild(ele)
+
+
+        }
+
+        function addNote() {
+
+            alert(20);
+        }
+
+        function clear() {
+
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

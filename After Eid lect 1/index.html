@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .divOuter{
+        border: 1px solid black;
+        height: 300px;
+    }
+    </style>
+
+</head>
+<body>
+    <div>
+        <button id="addNote">Add Note</button>
+        <button>Clear</button>
+    </div>
+
+    <script>
+        addNote.onclick = addNotes;
+        function addNotes() {
+            let div = document.createElement('div')
+            let notetitle = document.createElement('p')
+            notetitle.innerHTML = 'Note Title'
+            div.class = 'divOuter'
+            let input1 = document.createElement('input')
+            div.appendChild(notetitle);
+            div.appendChild(input1);
+            document.body.appendChild(div)
+
+
+        }
+    </script>
+</body>
+</html>

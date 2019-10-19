@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button>Submit</button>
+
+    <script>
+        // let a = document.createElement('input')
+        // let foot = document.createElement('footer')
+        // foot.appendChild(a)
+        // document.body.appendChild(foot);
+        // let section = document.createElement('section')
+
+        // let input = document.createElement('input')
+        // let btn = document.createElement('button')
+        // btn.innerHTML = "Submit"
+        // btn.id = "mybtn"
+        // a.placeholder = "Enter Your Name"
+        // input.placeholder = "Enter Your Password"
+        // input.type = "password"
+        // let newbtn = document.createElement('button')
+        // newbtn.onclick = changeColor
+        // newbtn.innerHTML = "Click to change color"
+        // section.appendChild(newbtn)
+        // section.appendChild(input)
+        // section.appendChild(btn)
+
+        // document.body.appendChild(section)
+
+
+        // function changeColor() {
+        //     mybtn.style.border = "2px solid red"
+        //     mybtn.style.borderRadius = "5px"
+
+        // }
+        let div = document.createElement('div')
+        let heading = document.createElement("h3")
+        heading.innerHTML = "write two number to add them."
+        div.appendChild(heading)
+        document.body.appendChild(div)
+
+        let input1 = document.createElement("input")
+        input1.id = "input1"
+        input1.placeholder = "Enter first number"
+        let input2 = document.createElement("input")
+        input2.id = "input2"
+        input2.placeholder = "Enter second number"
+
+        let input3 = document.createElement("input")
+        input3.id = "input3"
+        input3.placeholder = "Enter opertion"
+        let brk = document.createElement("br")
+        let brk2 = document.createElement("br")
+        let brk3 = document.createElement("br")
+        let btn = document.createElement("button")
+        btn.onclick = add
+        btn.innerHTML = "Click to Add"
+        let para = document.createElement("p")
+
+        div.appendChild(input1)
+        div.appendChild(brk)
+        div.appendChild(input2)
+        div.appendChild(brk2)
+        div.appendChild(input3)
+        div.appendChild(brk3)
+
+        div.appendChild(btn)
+        div.appendChild(para)
+        function add() {
+            let a = +document.getElementById("input1").value
+            let b = +document.getElementById("input2").value
+            let op = document.getElementById("input3").value
+            let res = 0
+            switch (op) {
+                case "+":
+                    res = a+b;
+                    break;
+                case "-":
+                    res = a-b
+                    break;
+                case "*":
+                    res = a*b
+                    break;
+
+                case "/":
+                    res = a/b
+                    break;
+            }
+
+            para.innerHTML = res
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

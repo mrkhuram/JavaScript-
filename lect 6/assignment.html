@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num1 = +prompt("Enter number 1")
+        let num2 = +prompt("Enter number 2")
+        let op = prompt("Enter operator")
+        let res = 0
+        
+        let calculator = {
+            add: function(a,b) {
+                return a+b
+            },
+            subtract: function(a,b) {
+                return a - b
+
+            },
+            divide: function(a,b) {
+                return a / b
+
+            },
+            multiply: function(a,b) {
+                return a * b
+
+            }
+
+        }
+        switch (op) {
+            case "+":
+                res = calculator.add(num1, num2);
+                break;
+            case "-":
+                res = calculator.subtract(num1, num2);
+                break;
+            case "*":
+                res = calculator.multiply(num1, num2);
+                break;
+
+            case "/":
+                res = calculator.divide(num1, num2);
+                break;
+
+            default:
+                break;
+        }
+        console.log(res);
+        
+    </script>
+</body>
+
+</html>

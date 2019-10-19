@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="loggedIn()" id="form">
+        <div id="usernameOuter">
+            <input type="text" id="username" placeholder="Enter Username">
+        </div>
+        <div id="usernameOuter">
+            <input type="text" id="dob" placeholder="Enter your Date of Birth">
+        </div>
+        <div id="usernameOuter">
+            <input type="text" id="email" placeholder="Enter your email">
+        </div>
+        <div id="passwordOuter">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <button onclick="showData()">Submit</button>
+    </form>
+    <table>
+        <tr>
+            <th> Name</th>
+            <td>Date of Birth</td>
+            <td>Email</td>
+            <td>Password</td>
+
+        </tr>
+        <tr>
+            <th id="th"></th>
+            <td id='thDob'></td>
+            <td id='thEmail'></td>
+            <td id='thPassword'></td>
+
+        </tr>
+    </table>
+    <script>
+        function loggedIn() {
+            if (!username.value) {
+                event.preventDefault()
+                let p = document.createElement('p')
+                p.innerHTML = "Enter a valid Username"
+                usernameOuter.appendChild(p)
+            }
+            if (!password.value) {
+                event.preventDefault()
+                let p = document.createElemenpt('p')
+                p.innerHTML = "Enter a valid Password"
+                passwordOuter.appendChild(p)
+            }
+
+        }
+        function showData() {
+            event.preventDefault()
+            let user = username.value
+            th.innerHTML = user
+            let dobirth = dob.value
+            thDob.innerHTML = dobirth
+            let email1 = email.value
+            thEmail.innerHTML = email1
+            let pw = password.value
+            thPassword.innerHTML = pw
+
+        }
+
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* -----------------------------------*/
+        /* ------------- Mine Code  ----------*/
+        /* -----------------------------------*/
+    // let letters = ['a','b','c','d']
+    // let fruits = ["apple", "mango","banana","cherry",'dates',"mango","orange","mango","banana", "mango", "banana","mango", "banana","mango","banana","mango","banana","mango","guava","banana"];
+    
+    // letters.map( item =>{
+    //     for (let item  of fruits) {
+    //         if(item[0] == letters[0]){
+    //             letters[0] = item
+                
+    //         }else if(item[0] == letters[1]){
+    //             letters[1] = item
+                
+    //         }else if(item[0] == letters[2]){
+    //             letters[2] = item
+                
+    //         }
+    //         else if(item[0] == letters[3]){
+    //             letters[3] = item
+                
+    //         }
+            
+    //     }
+    // })
+    // console.log(letters);
+
+        /* -----------------------------------*/
+        /* ------------ Code of Sir ----------*/
+        /* -----------------------------------*/
+
+
+    let letters = ['a','b','c','d']
+    let fruits = ["apple", "mango","banana","cherry","dates","mango","orange","mango","banana", "mango", "banana","mango", "banana","mango","banana","mango","banana","mango","guava","banana"];
+    let result = chalFruitChuk();
+    console.log(result);
+    
+    function chalFruitChuk(){
+        let arr = []
+        let newFruits = letters.map( newItem =>{
+        for (let item  of fruits) {
+            if(item[0] == newItem){
+               arr.push(item)
+                
+            }
+            
+        }
+    })
+    return arr
+    }
+
+
+
+    console.log(letters);
+    // console.log(newFruits);
+    // console.log(arr);
+
+    
+    </script>
+</body>
+</html>

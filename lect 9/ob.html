@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .fruits{
+        width: 100px;
+        flex-wrap: wrap;
+    }
+    #table , td, th {
+        border: 1px solid black
+    }
+    td{
+        padding: 30px
+    }
+    </style>
+</head>
+
+<body>
+
+    <table id="table">
+       <tr class="table">
+           <th>Name</th>
+           <th>Price</th>
+           <th>Image</th>
+       </tr>
+    </table>
+
+    <script>
+        let fruits = [
+            {
+                name: 'Apple',
+                price: 170,
+                src: '.jpg'
+            },
+            {
+                name: 'Banana',
+                price: 100,
+                src: '.jpg'
+            },
+            {
+                name: 'Mango',
+                price: 130,
+                src: '.jpg'
+            },            {
+                name: 'Raspberry',
+                price: 330,
+                src: '.jpg'
+            }
+        ]
+            
+        fruits.forEach(fruitsitem => {
+            table.innerHTML += '<tr>\
+                <td>  ' +fruitsitem.name +'</td>\
+                <td> ' +fruitsitem.price +'</td>\
+                <td> <img src='+fruitsitem.name.toLowerCase() + fruitsitem.src+' alt="" class="fruits"></td>\
+                </tr > '
+        })
+    </script>
+</body>
+
+</html>

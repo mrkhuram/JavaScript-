@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        table,
+        td {
+            border: 1px solid black
+        }
+
+        .fruits {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><input type="checkbox" class="fruitInput"></td>
+            <td>Apple</td>
+            <td>250</td>
+            <td><img src="apple.jpg" alt="" class="fruits"></td>
+            <td><input type="text" placeholder="Quantity"></td>
+
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="fruitInput"></td>
+            <td>Mango</td>
+            <td>250</td>
+            <td><img src="mango.jpg" alt="" class="fruits"></td>
+            <td><input type="text" placeholder="Quantity"></td>
+
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="fruitInput"></td>
+            <td>banana</td>
+            <td>100</td>
+            <td><img src="banana.jpg" alt="" class="fruits"></td>
+            <td><input type="text" placeholder="Quantity"></td>
+
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="fruitInput"></td>
+            <td>Raspberry</td>
+            <td>450</td>
+            <td><img src="raspberry.jpg" alt="" class="fruits"></td>
+            <td><input type="text" placeholder="Quantity"></td>
+
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="fruitsInput" id="dis"></td>
+            <td>Check this to Need discount</td>
+            <td class="discount" id="discountData"></td>
+            <!-- <td><input type="text" placeholder="Quantity"></td>                 -->
+        </tr>
+    </table>
+    <button id="order">Order Now</button>
+    <script>
+        let fruit = document.querySelectorAll('.fruitInput')
+        order.onclick = fruitGet
+        let total = 0;
+        let price = 0;
+        let quantity = 0
+        let quanTotal = 0
+        function fruitGet() {
+            total = 0
+            
+            fruit.forEach((fruitsArr) => {
+                if (fruitsArr.checked) {
+                
+                    price = +fruitsArr.parentNode.nextElementSibling.nextElementSibling.innerText;
+                    
+                    quantity = +fruitsArr.parentNode.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.value;
+                    
+                    quanTotal = 0
+                    quanTotal = quantity * price
+
+                    total += quanTotal;
+                    
+                    
+                    let titleValue = fruitsArr.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.firstChild
+                    titleValue.title = quanTotal
+                }
+            })
+
+            let val = +disInput.value
+            console.log("total is " + (total - (val / 100 * total)));
+
+
+
+        }
+        dis.onclick = () => {
+            if (!dis.checked) {
+                return
+            }
+            let input = document.createElement('input')
+            input.id = 'disInput'
+            discountData.appendChild(input)
+            console.log('true');
+
+        }
+        // dis.onclick = ()=>{
+        //     if(dis.checked){
+        //         let disc = document.querySelectorAll('td.discount')
+        //         disc.style.display = 'inline';
+        //         console.log(disc);
+        //     }
+
+        // }
+
+
+    </script>
+
+</body>
+
+</html>
